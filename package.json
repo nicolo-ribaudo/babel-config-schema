@@ -1,0 +1,13 @@
+{
+  "name": "babel-config-schema",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build-root": "node build-schema root > schemas/babel-config.schema.json",
+    "build-relative": "node build-schema relative > schemas/babelrc.schema.json",
+    "build": "npm run build-root && npm run build-relative"
+  },
+  "devDependencies": {
+    "yaml-tag": "^1.1.0"
+  }
+}

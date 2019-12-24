@@ -1,0 +1,705 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://babeljs.io/config-schema",
+  "title": "Babel 7 configuration schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "plugins": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "const": "@babel/plugin-proposal-class-properties"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-class-properties"
+              },
+              {
+                "$ref": "#/plugin-options/loose"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-do-expressions"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-do-expressions"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-export-default-from"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-export-default-from"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-export-namespace-from"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-export-namespace-from"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-function-bind"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-function-bind"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-function-sent"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-function-sent"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-logical-assignment-operators"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-decorators"
+              },
+              {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "decoratorsBeforeExport": {
+                        "type": "boolean",
+                        "default": false
+                      },
+                      "legacy": {
+                        "const": false
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "decoratorsBeforeExport"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "legacy": {
+                        "const": true
+                      }
+                    },
+                    "additionalProperties": false,
+                    "required": [
+                      "legacy"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 2,
+            "additionalItems": false
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-logical-assignment-operators"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-nullish-coalescing-operator"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-nullish-coalescing-operator"
+              },
+              {
+                "$ref": "#/plugin-options/loose"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-numeric-separator"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-numeric-separator"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-optional-chaining"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-optional-chaining"
+              },
+              {
+                "$ref": "#/plugin-options/loose"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-partial-application"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-partial-application"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-private-methods"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-pipeline-operator"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "proposal": {
+                    "enum": [
+                      "minimal",
+                      "smart",
+                      "fsharp"
+                    ]
+                  }
+                },
+                "additionalProperties": false,
+                "required": [
+                  "proposal"
+                ]
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 2,
+            "additionalItems": false
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-private-methods"
+              },
+              {
+                "$ref": "#/plugin-options/loose"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/plugin-proposal-throw-expressions"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/plugin-proposal-throw-expressions"
+              },
+              {
+                "$ref": "#/plugin-options/empty"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          }
+        ]
+      }
+    },
+    "presets": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "const": "@babel/preset-env"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/preset-env"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "targets": {
+                    "description": "Describes the environments you support/target for your project.\nThis can either be a browserslist-compatible query, provided as a string or an array, or an object of minimum environment versions to support.\n",
+                    "oneOf": [
+                      {
+                        "$ref": "#/utils/browserslist"
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "chrome": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "opera": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "edge": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "firefox": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "ie": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "ios": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "android": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "eleftron": {
+                            "type": "string",
+                            "description": "The minimum version of this engine to support."
+                          },
+                          "safari": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "description": "The minimum version of this engine to support."
+                              },
+                              {
+                                "const": "tp",
+                                "description": "If you want to compile against the technology preview version of Safari.\n"
+                              }
+                            ]
+                          },
+                          "node": {
+                            "anyOf": [
+                              {
+                                "enum": [
+                                  "current",
+                                  true
+                                ],
+                                "description": "If you want to compile against the current node version, you can specify \"node\": true or \"node\": \"current\", which would be the same as \"node\": process.versions.node.\n"
+                              },
+                              {
+                                "type": "string",
+                                "description": "The minimum version of this engine to support."
+                              }
+                            ]
+                          },
+                          "browsers": {
+                            "$ref": "#/utils/browserslist"
+                          },
+                          "esmodules": {
+                            "type": "boolean",
+                            "default": false,
+                            "description": "You may also target browsers supporting ES Modules. When specifying this option, the browsers field will be ignored. You can use this approach in combination with <script type=\"module\"></script> to conditionally serve smaller scripts to users.\n"
+                          }
+                        }
+                      }
+                    ],
+                    "default": "last 2 versions, >5%, safari tp"
+                  },
+                  "spec": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable more spec compliant, but potentially slower, transformations for any plugins in this preset that support them.\n"
+                  },
+                  "loose": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable \"loose\" transformations for any plugins in this preset that allow them.\n"
+                  },
+                  "modules": {
+                    "description": "Configure transformation of ECMAScript modules.\n",
+                    "oneOf": [
+                      {
+                        "const": "auto",
+                        "description": "Autmatically choose depending on how Babel is called. For example, this will disable the modules transform when using webpack or rollup, but not then using @babel/cli.\n"
+                      },
+                      {
+                        "const": false,
+                        "description": "Don't transform modules.\n"
+                      },
+                      {
+                        "enum": [
+                          "amd",
+                          "umd",
+                          "systemjs",
+                          "commonjs",
+                          "cjs"
+                        ]
+                      }
+                    ],
+                    "default": "auto"
+                  },
+                  "debug": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Output the targets/plugins used and the version specified in plugin data version to console.log\n"
+                  },
+                  "include": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "exclude": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "useBuiltIns": {
+                    "enum": [
+                      "usage",
+                      "entry",
+                      false
+                    ]
+                  },
+                  "corejs": {
+                    "oneOf": [
+                      {
+                        "enum": [
+                          2,
+                          3
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "version": {
+                            "enum": [
+                              2,
+                              3
+                            ]
+                          },
+                          "proposals": {
+                            "type": "boolean",
+                            "default": false
+                          }
+                        },
+                        "additionalProperties": false,
+                        "required": [
+                          "version"
+                        ]
+                      }
+                    ]
+                  },
+                  "configPath": {
+                    "type": "string"
+                  },
+                  "ignoreBrowserslistConfig": {
+                    "type": "boolean",
+                    "default": false
+                  },
+                  "shippedProposals": {
+                    "type": "boolean",
+                    "default": false
+                  }
+                },
+                "additionalProperties": false
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          },
+          {
+            "const": "@babel/preset-typescript"
+          },
+          {
+            "type": "array",
+            "items": [
+              {
+                "const": "@babel/preset-typescript"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "isTSX": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "minItems": 1,
+            "additionalItems": false
+          }
+        ]
+      }
+    },
+    "extends": {
+      "type": "string",
+      "description": "Configs may \"extend\" other configuration files. Config fields in the current config will be merged on top of the extended file's configuration.\n"
+    },
+    "env": {
+      "type": "object",
+      "patternProperties": {
+        "^.*$": {
+          "type": "object",
+          "properties": {
+            "plugins": {
+              "$ref": "#/properties/plugins"
+            },
+            "presets": {
+              "$ref": "#/properties/presets"
+            },
+            "test": {
+              "$ref": "#/properties/test"
+            },
+            "include": {
+              "$ref": "#/properties/include"
+            },
+            "exclude": {
+              "$ref": "#/properties/exclude"
+            },
+            "ignore": {
+              "$ref": "#/properties/ignore"
+            },
+            "only": {
+              "$ref": "#/properties/only"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "description": "Allows for entire nested configuration options that will only be enabled if the envKey matches the envName option.\nNote: env[envKey] options will be merged on top of the options specified in the root object.\n"
+    },
+    "override": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "env": {
+            "$ref": "#/properties/env"
+          },
+          "plugins": {
+            "$ref": "#/properties/plugins"
+          },
+          "presets": {
+            "$ref": "#/properties/presets"
+          },
+          "test": {
+            "$ref": "#/properties/test"
+          },
+          "include": {
+            "$ref": "#/properties/include"
+          },
+          "exclude": {
+            "$ref": "#/properties/exclude"
+          },
+          "ignore": {
+            "$ref": "#/properties/ignore"
+          },
+          "only": {
+            "$ref": "#/properties/only"
+          }
+        },
+        "additionalProperties": false
+      },
+      "description": "Allows users to provide an array of options that will be merged into the current configuration one at a time. This feature is best used alongside the \"test\"/\"include\"/\"exclude\" options to provide conditions for which an override should apply.\n"
+    },
+    "test": {
+      "$ref": "#/utils/match-patterns",
+      "description": "If all patterns fail to match, the current configuration object is considered inactive and is ignored during config processing. This option is most useful when used within an overrides option object, but it's allowed anywhere.\n"
+    },
+    "include": {
+      "$ref": "#/utils/match-patterns",
+      "description": "If all patterns fail to match, the current configuration object is considered inactive and is ignored during config processing. This option is most useful when used within an overrides option object, but it's allowed anywhere.\n\nThis option is a synonym for \"test\".\n"
+    },
+    "exclude": {
+      "$ref": "#/utils/match-patterns",
+      "description": "If any of patterns match, the current configuration object is considered inactive and is ignored during config processing. This option is most useful when used within an overrides option object, but it's allowed anywhere.\n"
+    },
+    "ignore": {
+      "$ref": "#/utils/match-patterns",
+      "description": "If any of the patterns match, Babel will immediately stop all processing of the current build.\nNote: This option disables all Babel processing of a file. While that has its uses, it is also worth considering the \"exclude\" option as a less aggressive alternative.\n"
+    },
+    "only": {
+      "$ref": "#/utils/match-patterns",
+      "description": "If all of the patterns match, Babel will immediately stop all processing of the current build.\nNote: This option disables all Babel processing of a file. While that has its uses, it is also worth considering the \"test\"/\"include\" option as a less aggressive alternative.\n"
+    }
+  },
+  "plugin-options": {
+    "empty": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+    "loose": {
+      "type": "object",
+      "properties": {
+        "loose": {
+          "type": "boolean",
+          "default": false
+        }
+      }
+    }
+  },
+  "utils": {
+    "browserslist": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ],
+      "description": "A query to select browsers (ex: \"last 2 versions, > 5%, safari tp\") using browserslist.\n"
+    },
+    "match-patterns": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    }
+  }
+}
